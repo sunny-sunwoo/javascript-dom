@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prime check</title>
+	<script type="text/javascript">
+		function isPrime(x){
+			if (x <= 1) return false;
+			for (var i = 2; i < x; i++){
+				if (x % i == 0) return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<h1>Below are Prime Numbers less than 1000</h1>
+	<script>
+		for(var i = 0 ; i < 1000; i++){
+			if(isPrime(i)) {
+				document.write("<h3>" + i + " is Prime</h3>")
+			}
+		}
+	</script>
+	<h2>That's it!</h2>
+</body>
+</html>

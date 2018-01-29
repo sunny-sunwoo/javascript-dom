@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Demos</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		function onLoad(){
+			var ans = prompt("Is the lecture over yet?");
+			var face = "\u2600";
+
+			if(ans == "Yes" || ans == "yes"){
+				face = "\u263A";
+			}
+			else if(ans == "No" || ans =="no"){
+				face = "\u2639";
+			}
+
+			document.getElementById("face-place").appendChild(document.createTextNode(face));
+		}
+
+		function addNames(){
+			var first = document.getElementById("first-name").value;
+			var last = document.getElementById("last-name").value;
+			alert(first+ " " +last);
+			alert(parseInt(first) + parseInt(last));
+		}
+	</script>
+	<script src="js/isprime.js"></script>
+</head>
+<body onLoad = "onLoad()">
+	<div class="title">JS Demos <span id="face-place"></span></div>
+	<div>
+		<ul>
+			<li><a href="primes.html">primes.html</a></li>
+			<li><a href="movement.html">movement.html</a></li>
+			<li><a href="todolist.html">todolist.html</a></li>
+		</ul>
+	</div>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<td><label for="firstname">First Name </label></td>
+					<td><input type="text" id="first-name"></td>
+				</tr>
+				<tr>
+					<td><label for="lastname">Last Name </label></td>
+					<td><input type="text" id="last-name"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button onClick="addNames()">Add</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div>
+		<label for="Check Prime">Check Prime </label>
+		<input type="text" id="is-prime-num" onfocus="primeOnFocus()">
+		<button id="is-prime-button" onclick="primeOnClick()">Is Prime?</button>
+	</div>
+</body>
+</html>

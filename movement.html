@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>movement</title>
+	<script type="text/javascript">
+		function myMove(horizontalChange, verticalChange){
+			var myElement = document.getElementById("myElement");
+			myElement.style.left = parseInt(myElement.style.left) + 50*horizontalChange+ "px";
+			myElement.style.top = parseInt(myElement.style.top) + 50*verticalChange + "px" ;
+
+		}
+	</script>
+</head>
+<body>
+	<div id = "myElement" style = "font-size : 36px; font-family: sans-serif; position:absolute; left: 400px; top: 400px;" > &hearts; JISUP &hearts; </div>
+	
+	<h2> Example Use of JavaScript to Move an Element </h2>
+
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+
+	<div style = "text-align: center" >
+		<input type="button" value= "UP" onclick="myMove(0,-1)">
+	</div>
+
+	<div>&nbsp;</div>
+
+	<div style = "text-align:center">
+		<input type="button" value = "LEFT" onclick="myMove(-1,0)">
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<input type="button" value= "RIGHT" onclick="myMove(1,0)">
+	</div>
+
+	<div>&nbsp;</div>
+
+	<div style = "text-align:center">
+		<input type="button" value ="DOWN" onclick="myMove(0,1)">
+	</div>
+
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+
+	<div style="text-align:center">
+		<input type="button" value="Mint" style="color:#1abc9c; font-size:large; font-weight:bold" onClick='document.getElementById("myElement").style.color="#1abc9c"' >
+
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+		<input type="button" value="Yellow" style="color:#f1c40f; font-size:large; font-weight:bold" onClick='document.getElementById("myElement").style.color="#f1c40f"' >
+
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+		<input type="button" value="blue" style="color:#3498db; font-size:large; font-weight:bold" onClick='document.getElementById("myElement").style.color="#3498db"' >
+	</div>
+</body>
+</html>
